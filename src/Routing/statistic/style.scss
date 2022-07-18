@@ -1,0 +1,97 @@
+// файл stats.js
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    text-align: center;
+    color: #E6E9ED;
+    margin: 32px 0 20px 0;
+  }
+
+  &__subtitle {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #E6E9ED;
+    margin-bottom: 36px;
+  }
+
+  &-filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    cursor: pointer;
+    width: 68px;
+    height: 100px;
+    border-right: 1px solid #636363;
+
+    &.active {
+      display: none;
+    }
+  }
+
+
+  // файл statsFilter
+  &-main {
+    max-width: 884px;
+    margin: 36px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &_filter {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid #585B59;
+      margin-left: 19px;
+      width: 240px;
+      cursor: pointer;
+      position: relative;
+      background-color: #383838;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &-content {
+        color: #FFFFFF;
+        display: flex;
+        font-family: Gilroy , sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 23px;
+        margin-left: 23px;
+        padding: 18px 0;
+
+      }
+      &-arrow {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+      }
+
+    }
+  }
+  @media (max-width: 768px){
+    &-main{
+      &_filter{
+        width: 250px;
+        margin: 0;
+      }
+    }
+  }
+
+}
+

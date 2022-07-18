@@ -1,0 +1,277 @@
+a {
+  text-decoration: none;
+  outline: none;
+  border: 0;
+}
+
+input, label {
+  outline: none;
+  border: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background-color: #151817;
+  position: relative;
+  z-index: 1005;
+  min-height: 110px;
+
+  &__blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E5E8EB;
+    opacity: 3%;
+    z-index: -200;
+  }
+
+  &__wrapper {
+    width: 1080px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    left: 36px;
+    top: 27%;
+  }
+
+  &__label {
+    display: none;
+    padding-left: 10px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #E5E8EB;
+  }
+
+  &__icon {
+    margin-top: -8px;
+    width: 68px;
+  }
+
+  &__text {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    color: #C4C2C2;
+    cursor: pointer;
+  }
+
+  &__burger {
+    position: absolute;
+    right: 36px;
+    top: 35%;
+  }
+
+  &__wallet {
+    position: absolute;
+    right: 0;
+    top: -10%;
+    cursor: pointer;
+
+    &-icon {
+      width: 37px;
+      height: 37px;
+    }
+  }
+
+  &__profile {
+    position: absolute;
+    right: 85px;
+    top: -10%;
+    cursor: pointer;
+
+    &-icon {
+      width: 37px;
+      height: 37px;
+    }
+  }
+}
+
+.text__white {
+  color: #FFFFFF;
+  transition: ease-in-out 0.3s;
+}
+
+.custom-radio-btn {
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  background: #DADADA;
+  border: 3px solid #a3a4a7;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+.custom-radio-btn::before {
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #8EFA3B;
+  box-shadow: inset -3px -3px 10px rgba(0, 0, 0, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+
+  transition: 0.2s ease-in;
+}
+
+.real-radio-btn:checked + .custom-radio-btn::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.real-radio-btn {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation {
+    &__wrapper {
+      width: 805px;
+      padding-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 28px;
+    }
+
+    &__logo {
+      top: 15px
+    }
+
+    &__icon {
+      width: 40px;
+    }
+  }
+  .custom-radio-btn {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    &__wrapper {
+      width: 465px;
+      padding: 18px 0;
+    }
+
+    &__text {
+      font-size: 28px;
+    }
+
+    &__logo {
+      top: 30%
+    }
+
+    &__icon {
+      width: 40px;
+    }
+  }
+  .custom-radio-btn {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .navigation {
+    &__links {
+      display: none;
+    }
+
+    &__icon {
+      width: 23px;
+    }
+
+    &__label {
+      display: block;
+    }
+  }
+}
+
+.burger-btn {
+  width: 37px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  & span {
+    position: absolute;
+    top: 14px;
+    background-color: #E5E8EB;
+    height: 3px;
+    width: 37px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    background-color: #E5E8EB;
+    height: 3px;
+    width: 37px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    background-color: #E5E8EB;
+    height: 3px;
+    width: 37px;
+  }
+}
+
+.burger-btn.active {
+  transform: rotate(45deg);
+
+  & span {
+    display: none;
+  }
+
+  &:before, &:after {
+    left: 15px;
+    content: ' ';
+    height: 37px;
+    width: 3px;
+  }
+
+  &:before {
+    transform: rotate(86deg);
+  }
+
+  &::after {
+    bottom: -10px;
+  }
+}

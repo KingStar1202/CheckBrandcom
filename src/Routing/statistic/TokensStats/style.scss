@@ -1,0 +1,141 @@
+.stats {
+  &-any {
+    margin-right: 346px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  &-name {
+    margin-left: 9px;
+  }
+
+  &__property {
+    width: 100%;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &-arrow-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      margin-left: 14px;
+    }
+  }
+
+  &-token {
+    width: 100%;
+    z-index: 1;
+
+    &-main {
+      display: flex;
+      font-family: 'Gilroy', sans-serif;
+      font-size: 17px;
+      color: #FFFFFF;
+      padding: 32px 10px;
+      border-bottom: 1px solid #636363;
+
+    }
+  }
+
+  &-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+
+  &-collection_flex {
+    max-width: 1242px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 28px auto 0;
+  }
+
+  &__collection {
+    width: 334px;
+    margin-right: 218px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+
+    &-values {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & div {
+        min-width: 60px;
+
+      }
+
+      &_first {
+        & svg {
+          margin-right: 14px;
+        }
+      }
+
+      &_perDay {
+        text-align: right;
+      }
+
+      &_perWeek {
+        color: #40C57C;
+        text-align: right;
+      }
+
+      &_floorPrice {
+
+        & svg {
+          margin-right: 14px;
+        }
+      }
+      &_owners{
+        text-align: right;
+        margin-left: 20px;
+      }
+      &_items{
+        text-align: right;
+      }
+    }
+  }
+
+
+  @media (max-width: 769px) {
+    &-token {
+      &-main {
+        padding: 25px 32px;
+      }
+    }
+    &-any {
+      display: none;
+    }
+    &__property {
+      display: none;
+    }
+    &-collection_flex {
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+}
+
+.valueIsPositive {
+  color: #40C57C;
+}
+.valueIsNegative {
+  color: #E85656;
+}
+.valueIsDefault {
+  color: #FFFFFF;
+}
