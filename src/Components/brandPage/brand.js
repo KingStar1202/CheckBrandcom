@@ -80,7 +80,7 @@ const Brand = () => {
                 <div className='brand__info'>
                     <div className='brand__count'>
                         <span className='count'>{itemCount}</span>
-                        <p>item</p>
+                        <p>items</p>
                     </div>
                     <div className='brand__count'>
                         <span className='count'>{brand.owner}</span>

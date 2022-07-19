@@ -25,19 +25,17 @@
   }
 
   &-content {
-    font-family: Gilroy;
+    font-family: 'Gilroy';
     background-color: #252525;
     font-size: 15px;
     color: #FFFFFF;
     font-weight: 500;
     line-height: 23px;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
     letter-spacing: -0.035em;
     padding: 16px 0 16px 18px;
   }
+
+
 
 }
 
@@ -85,10 +83,6 @@
     color: #FFFFFF;
     font-weight: 500;
     line-height: 23px;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
     letter-spacing: -0.035em;
     padding: 16px 0 16px 22px;
 
@@ -136,10 +130,6 @@
     font-family: Gilroy;
     font-size: 15px;
     color: #FFFFFF;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
     background-color: #252525;
 
     font-weight: 600;
@@ -162,4 +152,6 @@
 
 .sub, .sub__second, .sub__third {
   cursor: pointer;
+  overflow: hidden;
 }
+
