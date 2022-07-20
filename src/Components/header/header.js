@@ -1,6 +1,6 @@
 import './style.scss'
 import logo from '../../assets/image/header_logo.png';
-import wallet from '../../assets/image/wallet.svg'
+import wallet from '../../assets/image/wallet.png'
 import profile from '../../assets/image/profile.png'
 import { Link } from 'react-router-dom'
 import { NavCheckbox } from "./NavCheckbox";
